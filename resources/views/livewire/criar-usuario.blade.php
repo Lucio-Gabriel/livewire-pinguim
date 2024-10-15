@@ -19,7 +19,7 @@
             wire:model.live="email"
             id="email" class="block mt-1 w-full"
             type="text" name="email"
-            autofocus autocomplete="username"
+            autocomplete="username"
             />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
