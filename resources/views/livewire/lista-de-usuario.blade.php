@@ -1,5 +1,12 @@
 <div>
 
+     <div class="my-4">
+        {{-- <x-text-input wire:model.live="search" placeholder="Search..." /> --}}
+
+
+        <input type="text" wire:model.live="search">
+
+     </div>
 
     <div class="relative overflow-x-auto">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">

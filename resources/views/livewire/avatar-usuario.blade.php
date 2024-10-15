@@ -1,11 +1,11 @@
 <div>
 
-    <form wire:submit.prevent>
+    <form wire:submit.prevent="save">
 
         <div>
             <x-input-label for="avatar" :value="__('Avatar')" />
 
-            @if ($this->avatar)
+            @if ($avatar)
                 <img src="{{ $avatar->temporaryUrl() }}" alt="">
             @endif
 
