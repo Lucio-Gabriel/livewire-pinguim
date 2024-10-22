@@ -6,16 +6,30 @@
 
         <input type="text" wire:model.live="search">
 
+        <x-text-input wire:model="searchEmail" placeholder="Email Search..." />
+
+        <select wire:model="limit">
+            <option value="5">5</option>
+            <option value="15">15</option>
+            <option value="50">50</option>
+        </select>
+
      </div>
 
     <div class="relative overflow-x-auto">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-3 cursor-pointer" wire:click="sort('name')">
+                    @if($sortBy == 'name')
+                        <span>@if($sortDir == 'asc')⬇@else⬆@endif</span>
+                    @endif
                     Nome
                 </th>
-                <th scope="col" class="px-6 py-3">
+                <th scope="col" class="px-6 py-3 cursor-pointer" wire:click="sort('email')">
+                    @if($sortBy == 'email')
+                        <span>@if($sortDir == 'asc')⬇@else⬆@endif</span>
+                    @endif
                    E-mail
                 </th>
                 <th scope="col" class="px-6 py-3">
@@ -38,11 +52,12 @@
                     <livewire:editar-usuario ::user="$user" wire:key="edit-user-{{ $user->id }}"/>
 
                 </td>
-
             </tr>
             @endforeach
             </tbody>
         </table>
     </div>
+
+    {{ $users->links() }}
 
 </div>
