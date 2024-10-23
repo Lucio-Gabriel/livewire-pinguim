@@ -14,11 +14,11 @@
                 </div>
             </div> --}}
 
-            {{-- <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <livewire:criar-usuario />
                 </div>
-            </div> --}}
+            </div>
 
 
 

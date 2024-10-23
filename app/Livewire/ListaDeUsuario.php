@@ -52,7 +52,6 @@ class ListaDeUsuario extends Component
                     ->when($this->sortBy, fn(Builder $q) => $q->orderBy($this->sortBy, $this->sortDir))
                     ->paginate($this->limit)
                     // ->get()
-
         ]);
     }
 

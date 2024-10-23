@@ -2,8 +2,6 @@
 
      <form method="POST" wire:submit.prevent="save">
 
-
-
         <div>
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input
@@ -26,6 +24,7 @@
 
         <div class="flex items-center justify-end mt-4">
             <x-primary-button class="ms-3">
+                <span wire:loading wire:target="save" class="animate-bounce mr-1">🔥</span>
                 {{ __('Save') }}
             </x-primary-button>
         </div>

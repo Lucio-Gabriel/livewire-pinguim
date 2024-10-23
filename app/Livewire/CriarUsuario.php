@@ -32,6 +32,8 @@ class CriarUsuario extends Component
 
     public function save()
     {
+        // simulando o tempo de loanding para meu user
+        sleep(2);
 
         $this->validate();
 

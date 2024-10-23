@@ -1,6 +1,6 @@
 <div>
 
-     <div class="my-4">
+     <div class="mb-4">
         {{-- <x-text-input wire:model.live="search" placeholder="Search..." /> --}}
 
 
