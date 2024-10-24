@@ -11,6 +11,9 @@ class CriarUsuario extends Component
     public ?string $name = null;
     public ?string $email = null;
 
+    // propriedade  para o AlipneJS
+    public bool $saving = false;
+
     // podemos colocar todas as nossas regras aqui
     protected function rules()
     {
@@ -32,6 +35,8 @@ class CriarUsuario extends Component
 
     public function save()
     {
+
+        $this->saving = true;
         // simulando o tempo de loanding para meu user
         sleep(2);
 

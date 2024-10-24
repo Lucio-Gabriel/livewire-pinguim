@@ -29,6 +29,26 @@
             </x-primary-button>
         </div>
 
+
+        @dump($saving)
+
+        <div x-data="{open: @entangle('saving')}">
+
+            <div x-show="open">
+                Bem vindo ao Sistema
+            </div>
+
+            <div>
+                Name::
+                <span x-text="$wire.name"></span>
+            </div>
+
+            <button type="button" @click="open = false">
+                Back
+            </button>
+
+        </div>
+
      </form>
 
 </div>
